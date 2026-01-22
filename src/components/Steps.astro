@@ -1,0 +1,44 @@
+---
+const steps = [
+  { num: "01", title: "Создай профиль", desc: "Укажи свой уровень, цели и предпочтения по тренировкам", icon: "👤" },
+  { num: "02", title: "Смотри анкеты", desc: "Листай профили людей рядом с тобой", icon: "👀" },
+  { num: "03", title: "Матчься", desc: "Свайпай вправо, если хочешь тренироваться вместе", icon: "🔥" },
+  { num: "04", title: "Тренируйся", desc: "Договаривайся о времени и месте в чате", icon: "💪" },
+];
+---
+
+<section id="how-it-works" class="py-16 md:py-24 px-4 bg-[#0a0a1a] relative overflow-hidden">
+  <div class="absolute inset-0">
+    <div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+  </div>
+  
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="text-center mb-10 md:mb-16 reveal">
+      <span class="inline-block px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-[#667eea]/20 text-[#667eea] text-xs md:text-sm font-medium mb-3 md:mb-4">Как это работает</span>
+      <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-3 md:mb-4">4 простых шага</h2>
+      <p class="text-gray-400 text-sm md:text-lg">До первой совместной тренировки</p>
+    </div>
+    
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+      {steps.map((s, i) => (
+        <div class={`reveal stagger-${i + 1} relative group`}>
+          {i < 3 && (
+            <div class="hidden lg:block absolute top-12 left-full w-full h-px bg-gradient-to-r from-[#FF6B35]/50 to-transparent z-0"></div>
+          )}
+          <div class="relative z-10 text-center">
+            <div class="relative inline-block mb-4 md:mb-6">
+              <div class="w-16 h-16 md:w-24 md:h-24 rounded-2xl md:rounded-3xl bg-gradient-to-br from-[#FF6B35] to-[#E55A2B] flex items-center justify-center text-2xl md:text-4xl shadow-lg shadow-[#FF6B35]/20 group-hover:shadow-[#FF6B35]/50 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                {s.icon}
+              </div>
+              <span class="absolute -top-1 -right-1 md:-top-2 md:-right-2 w-6 h-6 md:w-8 md:h-8 rounded-full bg-white text-[#0f0f23] text-xs md:text-sm font-bold flex items-center justify-center group-hover:scale-125 transition-transform">
+                {s.num}
+              </span>
+            </div>
+            <h3 class="font-bold text-sm md:text-xl text-white mb-1 md:mb-2 group-hover:text-[#FF6B35] transition-colors">{s.title}</h3>
+            <p class="text-gray-400 text-xs md:text-sm">{s.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

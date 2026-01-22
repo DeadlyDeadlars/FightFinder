@@ -1,0 +1,172 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#0f0f23" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.png" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <title>{title}</title>
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "FightFinder",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "Android, iOS",
+        "description": "Приложение для поиска партнёра по тренировкам в зале",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "RUB"
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-[#0f0f23] text-gray-100 antialiased">
+    <!-- Cursor glow -->
+    <div id="cursor-glow" class="fixed w-64 h-64 rounded-full pointer-events-none z-50 opacity-0 transition-opacity duration-300" style="background: radial-gradient(circle, rgba(255,107,53,0.15) 0%, transparent 70%); transform: translate(-50%, -50%);"></div>
+    
+    <!-- Particles background -->
+    <div id="particles" class="fixed inset-0 pointer-events-none z-0"></div>
+    <slot />
+    
+    <script>
+      // Cursor glow
+      const glow = document.getElementById('cursor-glow');
+      let glowVisible = false;
+      document.addEventListener('mousemove', (e) => {
+        glow.style.left = e.clientX + 'px';
+        glow.style.top = e.clientY + 'px';
+        if (!glowVisible) {
+          glow.style.opacity = '1';
+          glowVisible = true;
+        }
+      });
+      
+      // Scroll reveal
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      
+      document.querySelectorAll('.reveal, .reveal-left, .reveal-scale').forEach(el => observer.observe(el));
+      
+      // Animated counter
+      document.querySelectorAll('[data-count]').forEach(el => {
+        const target = parseInt(el.dataset.count);
+        const observer = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            let current = 0;
+            const step = target / 40;
+            const timer = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                el.textContent = target + (el.dataset.suffix || '');
+                clearInterval(timer);
+              } else {
+                el.textContent = Math.floor(current) + (el.dataset.suffix || '');
+              }
+            }, 30);
+            observer.disconnect();
+          }
+        }, { threshold: 0.5 });
+        observer.observe(el);
+      });
+      
+      // Track Telegram clicks
+      const CLICK_KEY = 'ff_tg_clicks';
+      let clicks = parseInt(localStorage.getItem(CLICK_KEY) || '0');
+      
+      // Show current clicks
+      document.querySelectorAll('[data-count]').forEach(el => {
+        el.textContent = clicks;
+      });
+      
+      document.querySelectorAll('a[href*="t.me/FightFinder"]').forEach(link => {
+        link.addEventListener('click', () => {
+          clicks++;
+          localStorage.setItem(CLICK_KEY, clicks.toString());
+          document.querySelectorAll('[data-count]').forEach(el => {
+            el.textContent = clicks;
+          });
+        });
+      });
+      
+      // Particles
+      const canvas = document.createElement('canvas');
+      canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%';
+      document.getElementById('particles').appendChild(canvas);
+      const ctx = canvas.getContext('2d');
+      let particles = [];
+      
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+      
+      for (let i = 0; i < 50; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          size: Math.random() * 2 + 1,
+          alpha: Math.random() * 0.5 + 0.1
+        });
+      }
+      
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+          if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(255, 107, 53, ${p.alpha})`;
+          ctx.fill();
+        });
+        requestAnimationFrame(animate);
+      }
+      animate();
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

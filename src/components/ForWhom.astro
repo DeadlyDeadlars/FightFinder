@@ -1,0 +1,33 @@
+---
+const segments = [
+  { icon: "🆕", title: "Новичкам", desc: "Найди опытного напарника, который поможет освоиться в зале" },
+  { icon: "💪", title: "Опытным", desc: "Тренируйся с равными по уровню для лучших результатов" },
+  { icon: "🏃", title: "Занятым", desc: "Находи партнёров с таким же графиком как у тебя" },
+  { icon: "🎯", title: "Целеустремлённым", desc: "Объединяйся с теми, кто разделяет твои цели" },
+];
+---
+
+<section class="py-16 md:py-24 px-4 bg-[#0a0a1a] relative overflow-hidden">
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="text-center mb-10 md:mb-16 reveal">
+      <span class="inline-block px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-purple-500/20 text-purple-400 text-xs md:text-sm font-medium mb-3 md:mb-4">Для кого</span>
+      <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-3 md:mb-4">FightFinder для всех</h2>
+      <p class="text-gray-400 text-sm md:text-lg">Кто хочет тренироваться эффективнее</p>
+    </div>
+    
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+      {segments.map((s, i) => (
+        <div class={`reveal stagger-${i + 1} group relative bg-gradient-to-br from-white/10 to-white/5 p-4 md:p-6 rounded-2xl md:rounded-3xl border border-white/10 text-center hover:border-[#FF6B35]/50 transition-all duration-500 overflow-hidden hover:-translate-y-2`}>
+          <div class="absolute inset-0 bg-gradient-to-br from-[#FF6B35]/0 to-[#FF6B35]/0 group-hover:from-[#FF6B35]/10 group-hover:to-[#E55A2B]/5 transition-all duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-14 h-14 md:w-20 md:h-20 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-3 md:mb-4 group-hover:scale-110 group-hover:bg-[#FF6B35]/20 transition-all duration-500">
+              <span class="text-2xl md:text-4xl group-hover:scale-125 transition-transform duration-500">{s.icon}</span>
+            </div>
+            <h3 class="font-bold text-sm md:text-xl text-white mb-1 md:mb-2 group-hover:text-[#FF6B35] transition-colors">{s.title}</h3>
+            <p class="text-gray-400 text-xs md:text-sm group-hover:text-gray-300 transition-colors">{s.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

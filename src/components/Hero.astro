@@ -1,0 +1,225 @@
+---
+---
+
+<section class="min-h-screen bg-[#0f0f23] relative overflow-hidden pt-16 pb-8 md:pt-20 md:pb-16 px-4">
+  <!-- Animated background -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute top-20 left-10 w-48 md:w-72 h-48 md:h-72 bg-[#FF6B35]/20 rounded-full blur-[80px] md:blur-[100px] animate-float"></div>
+    <div class="absolute bottom-20 right-10 w-64 md:w-96 h-64 md:h-96 bg-[#667eea]/20 rounded-full blur-[100px] md:blur-[120px] animate-float" style="animation-delay: -3s;"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-gradient-to-r from-[#FF6B35]/10 to-[#667eea]/10 rounded-full blur-[100px] md:blur-[150px]"></div>
+  </div>
+
+  <nav class="fixed top-0 left-0 right-0 bg-[#0f0f23]/70 backdrop-blur-2xl z-50 border-b border-white/5">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 md:w-9 md:h-9 rounded-xl bg-gradient-to-br from-[#FF6B35] to-[#E55A2B] flex items-center justify-center text-white font-bold text-sm md:text-base shadow-lg shadow-[#FF6B35]/20">F</div>
+        <span class="text-lg md:text-xl font-bold bg-gradient-to-r from-[#FF6B35] to-[#ff8f6b] bg-clip-text text-transparent">FightFinder</span>
+      </div>
+      <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
+        <a href="#how-it-works" class="hover:text-white transition-colors">Как работает</a>
+        <a href="#waitlist" class="hover:text-white transition-colors">Бета-тест</a>
+      </div>
+      <a href="https://t.me/FightFinder" target="_blank" class="flex items-center gap-2 bg-gradient-to-r from-[#FF6B35] to-[#E55A2B] text-white px-4 md:px-5 py-2 rounded-full font-semibold text-sm hover:shadow-lg hover:shadow-[#FF6B35]/30 transition-all duration-300">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        <span class="hidden sm:inline">Присоединиться</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="max-w-6xl mx-auto pt-12 md:pt-16 flex flex-col lg:flex-row items-center gap-8 md:gap-12 relative z-10">
+    <div class="flex-1 text-center lg:text-left">
+      <div class="inline-block mb-4 md:mb-6 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-white/5 border border-white/10 text-xs md:text-sm text-gray-400 animate-shimmer">
+        🚀 Скоро запуск бета-версии
+      </div>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-tight mb-4 md:mb-6">
+        Найди партнёра<br/>
+        <span class="bg-gradient-to-r from-[#FF6B35] via-[#ff8f6b] to-[#FF6B35] bg-clip-text text-transparent animate-gradient text-glow">для тренировок</span>
+      </h1>
+      <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-400 mb-6 md:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0">
+        Больше никаких пропущенных тренировок. Находи единомышленников рядом и тренируйся вместе.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start px-4 sm:px-0">
+        <a href="https://t.me/FightFinder" target="_blank" class="group relative bg-gradient-to-r from-[#FF6B35] to-[#E55A2B] text-white px-6 md:px-8 py-3.5 md:py-4 rounded-full font-bold text-base md:text-lg transition-all duration-300 hover:scale-105 overflow-hidden">
+          <span class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+          <span class="relative flex items-center justify-center gap-2">
+            Попасть в бета-тест
+            <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </span>
+        </a>
+        <a href="#how-it-works" class="border border-white/20 text-white px-6 md:px-8 py-3.5 md:py-4 rounded-full font-semibold text-base md:text-lg hover:bg-white/10 hover:border-white/40 transition-all duration-300 backdrop-blur-sm">
+          Как это работает
+        </a>
+      </div>
+      
+      <div class="flex items-center gap-4 md:gap-6 mt-8 md:mt-10 justify-center lg:justify-start">
+        <div class="flex -space-x-2 md:-space-x-3">
+          <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-[#0f0f23]"></div>
+          <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-2 border-[#0f0f23]"></div>
+          <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-[#0f0f23]"></div>
+          <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 border-2 border-[#0f0f23]"></div>
+        </div>
+        <p class="text-gray-400 text-xs md:text-sm"><span class="text-white font-semibold" data-count="0" data-suffix="">0</span> уже в листе ожидания</p>
+      </div>
+    </div>
+    
+    <!-- Phone mockup - hidden on very small screens, scaled on medium -->
+    <div class="flex-1 flex justify-center mt-4 lg:mt-0">
+      <div class="relative animate-float scale-[0.85] sm:scale-90 md:scale-100 origin-top">
+        <div class="w-64 md:w-72 h-[460px] md:h-[520px] bg-gradient-to-b from-gray-800 to-gray-900 rounded-[2.5rem] md:rounded-[3rem] p-2 shadow-2xl shadow-black/50 border border-white/10">
+          <div class="w-full h-full bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden relative">
+            <!-- Chat screen overlay -->
+            <div id="chat-screen" class="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] to-[#0f0f23] z-20 hidden flex-col">
+              <div class="flex items-center gap-3 px-4 py-3 border-b border-white/10">
+                <button id="chat-back" class="text-white text-lg">←</button>
+                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-[#4facfe] to-[#00f2fe] flex items-center justify-center text-sm">🥊</div>
+                <div>
+                  <p class="text-white font-semibold text-sm">Дмитрий</p>
+                  <p class="text-green-400 text-xs">онлайн</p>
+                </div>
+              </div>
+              <div class="flex-1 p-3 space-y-2 overflow-y-auto">
+                <div class="bg-white/10 rounded-2xl rounded-tl-sm p-2 max-w-[85%]">
+                  <p class="text-white text-xs">Привет! Видел, что ты тоже занимаешься боксом 🥊</p>
+                  <p class="text-gray-500 text-[10px] mt-1">10:30</p>
+                </div>
+                <div class="bg-gradient-to-r from-[#FF6B35] to-[#E55A2B] rounded-2xl rounded-tr-sm p-2 max-w-[85%] ml-auto">
+                  <p class="text-white text-xs">Привет! Да, хожу в зал на Ленина</p>
+                  <p class="text-white/60 text-[10px] mt-1">10:32</p>
+                </div>
+                <div class="bg-white/10 rounded-2xl rounded-tl-sm p-2 max-w-[85%]">
+                  <p class="text-white text-xs">О, я тоже рядом! Может потренируемся вместе завтра?</p>
+                  <p class="text-gray-500 text-[10px] mt-1">10:33</p>
+                </div>
+              </div>
+              <div class="p-2 border-t border-white/10">
+                <div class="flex gap-2">
+                  <input type="text" placeholder="Сообщение..." class="flex-1 bg-white/10 rounded-full px-3 py-1.5 text-white text-xs outline-none border border-white/10">
+                  <button class="w-8 h-8 rounded-full bg-gradient-to-r from-[#FF6B35] to-[#E55A2B] flex items-center justify-center text-white text-sm">→</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Status bar -->
+            <div class="flex justify-between items-center px-5 md:px-6 py-2 md:py-3 text-white/60 text-xs">
+              <span>9:41</span>
+              <div class="flex gap-1">
+                <span>📶</span>
+                <span>🔋</span>
+              </div>
+            </div>
+            
+            <!-- App content -->
+            <div class="px-3 md:px-4 pt-1 md:pt-2" id="phone-app">
+              <div class="flex justify-between items-center mb-3 md:mb-4">
+                <span class="text-white font-bold text-base md:text-lg">Рядом с тобой</span>
+                <span class="text-[#FF6B35] animate-pulse">🔥</span>
+              </div>
+              
+              <!-- Profile card -->
+              <div class="profile-card bg-gradient-to-br from-white/10 to-white/5 rounded-2xl md:rounded-3xl p-3 md:p-4 border border-white/10 transition-all duration-300">
+                <div class="w-full h-32 md:h-40 bg-gradient-to-br from-[#667eea] to-[#764ba2] rounded-xl md:rounded-2xl mb-2 md:mb-3 flex items-center justify-center overflow-hidden">
+                  <span class="profile-emoji text-5xl md:text-6xl transition-transform duration-300">🏋️</span>
+                </div>
+                <div class="flex justify-between items-start">
+                  <div>
+                    <p class="profile-name text-white font-bold text-sm md:text-base">Алексей, 25</p>
+                    <p class="profile-distance text-gray-400 text-xs md:text-sm">500м от тебя</p>
+                  </div>
+                  <span class="profile-level bg-[#FF6B35]/20 text-[#FF6B35] px-2 py-0.5 md:py-1 rounded-full text-[10px] md:text-xs">Средний</span>
+                </div>
+                <div class="profile-tags flex gap-1.5 md:gap-2 mt-2 md:mt-3">
+                  <span class="bg-white/10 px-2 py-0.5 md:py-1 rounded-full text-[10px] md:text-xs text-gray-300">Силовые</span>
+                  <span class="bg-white/10 px-2 py-0.5 md:py-1 rounded-full text-[10px] md:text-xs text-gray-300">Утро</span>
+                </div>
+              </div>
+              
+              <!-- Action buttons -->
+              <div class="flex justify-center gap-3 md:gap-4 mt-3 md:mt-4">
+                <button id="btn-skip" class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-xl md:text-2xl hover:bg-red-500/20 hover:border-red-500/50 transition-all">✕</button>
+                <button id="btn-like" class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-r from-[#FF6B35] to-[#E55A2B] flex items-center justify-center text-xl md:text-2xl shadow-lg shadow-[#FF6B35]/30 animate-pulse-glow transition-transform">💪</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Floating badge -->
+        <div id="beta-badge" class="absolute -bottom-1 md:-bottom-2 -right-1 md:-right-2 bg-gradient-to-r from-[#FF6B35] to-[#E55A2B] px-3 md:px-4 py-1.5 md:py-2 rounded-full text-white text-sm md:text-base font-bold shadow-lg shadow-[#FF6B35]/30 animate-pulse-glow transition-opacity">
+          BETA
+        </div>
+        
+        <!-- Notification - hidden on mobile -->
+        <div id="match-notification" class="hidden sm:flex absolute -left-12 md:-left-16 top-16 md:top-20 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl md:rounded-2xl p-2 md:p-3 shadow-xl animate-float cursor-pointer hover:scale-105 transition-all" style="animation-delay: -2s;">
+          <div class="flex items-center gap-2">
+            <span class="text-xl md:text-2xl">🎉</span>
+            <div>
+              <p class="text-white text-xs md:text-sm font-medium">Новый матч!</p>
+              <p class="text-gray-400 text-[10px] md:text-xs">Дмитрий хочет тренироваться</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scroll indicator - hidden on mobile -->
+  <div class="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 animate-bounce">
+    <span class="text-gray-500 text-sm">Листай вниз</span>
+    <span class="text-[#FF6B35]">↓</span>
+  </div>
+  
+  <script>
+    const profiles = [
+      { name: "Алексей, 25", distance: "500м", level: "Средний", emoji: "🏋️", tags: ["Силовые", "Утро"], gradient: "from-[#667eea] to-[#764ba2]" },
+      { name: "Мария, 23", distance: "1.2км", level: "Новичок", emoji: "🧘", tags: ["Йога", "Вечер"], gradient: "from-[#f093fb] to-[#f5576c]" },
+      { name: "Дмитрий, 28", distance: "800м", level: "Про", emoji: "🥊", tags: ["Бокс", "Утро"], gradient: "from-[#4facfe] to-[#00f2fe]" },
+      { name: "Анна, 26", distance: "300м", level: "Средний", emoji: "🏃", tags: ["Кардио", "День"], gradient: "from-[#43e97b] to-[#38f9d7]" },
+      { name: "Игорь, 30", distance: "1.5км", level: "Про", emoji: "💪", tags: ["Кроссфит", "Утро"], gradient: "from-[#fa709a] to-[#fee140]" },
+    ];
+    let idx = 0;
+    const card = document.querySelector('.profile-card');
+    const emoji = document.querySelector('.profile-emoji');
+    const name = document.querySelector('.profile-name');
+    const dist = document.querySelector('.profile-distance');
+    const level = document.querySelector('.profile-level');
+    const tags = document.querySelector('.profile-tags');
+    const imgBg = card?.querySelector('.rounded-xl, .rounded-2xl');
+    
+    function next(liked) {
+      if (!card) return;
+      card.style.transform = liked ? 'translateX(100px) rotate(10deg)' : 'translateX(-100px) rotate(-10deg)';
+      card.style.opacity = '0';
+      setTimeout(() => {
+        idx = (idx + 1) % profiles.length;
+        const p = profiles[idx];
+        emoji.textContent = p.emoji;
+        name.textContent = p.name;
+        dist.textContent = p.distance + ' от тебя';
+        level.textContent = p.level;
+        tags.innerHTML = p.tags.map(t => `<span class="bg-white/10 px-2 py-0.5 md:py-1 rounded-full text-[10px] md:text-xs text-gray-300">${t}</span>`).join('');
+        if (imgBg) imgBg.className = `w-full h-32 md:h-40 bg-gradient-to-br ${p.gradient} rounded-xl md:rounded-2xl mb-2 md:mb-3 flex items-center justify-center overflow-hidden`;
+        card.style.transform = 'translateX(0) rotate(0)';
+        card.style.opacity = '1';
+      }, 200);
+    }
+    
+    document.getElementById('btn-skip')?.addEventListener('click', () => next(false));
+    document.getElementById('btn-like')?.addEventListener('click', () => next(true));
+    
+    const chatScreen = document.getElementById('chat-screen');
+    const badge = document.getElementById('beta-badge');
+    const notif = document.getElementById('match-notification');
+    
+    document.getElementById('match-notification')?.addEventListener('click', () => {
+      chatScreen?.classList.remove('hidden');
+      chatScreen?.classList.add('flex');
+      if (badge) badge.style.opacity = '0';
+      if (notif) notif.style.opacity = '0';
+    });
+    document.getElementById('chat-back')?.addEventListener('click', () => {
+      chatScreen?.classList.add('hidden');
+      chatScreen?.classList.remove('flex');
+      if (badge) badge.style.opacity = '1';
+      if (notif) notif.style.opacity = '1';
+    });
+  </script>
+</section>
