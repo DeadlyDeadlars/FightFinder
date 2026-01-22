@@ -7,8 +7,8 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://markmarushak.github.io',
-  base: '/fightfinder-landing',
+  site: 'https://DeadlyDeadlars.github.io',
+  base: '/FightFinder',
   vite: {
     plugins: [tailwindcss()]
   },
